@@ -1,12 +1,17 @@
-# CVND---Image-Captioning-Project
+## CVND---Image-Captioning-Project  
+ > In this project I have design a CNN-LSTM architecture to predict a image caption from COCO dataset  
+ - Use CNN as Encoder
+ - Use LSTM as Decoder
+ - For CNN I have used pretrained resnet-50 architecture and made it's embedded layer trainable
+ - For LSTM, all the weights were trainable
 
-# Instructions  
-1. Clone this repo: https://github.com/cocodataset/cocoapi  
-```
-git clone https://github.com/cocodataset/cocoapi.git  
-```
 
-2. Setup the coco API (also described in the readme [here](https://github.com/cocodataset/cocoapi)) 
+## Instructions  
+1. Clone this project repo: ```https://github.com/Apucs/Image-Captioning.git```
+
+2. Clone this repo: ```git clone https://github.com/cocodataset/cocoapi.git```
+
+3. Setup the coco API (also described in the readme [here](https://github.com/cocodataset/cocoapi)) 
 ```
 cd cocoapi/PythonAPI  
 make  
@@ -24,4 +29,17 @@ cd ..
   * **2014 Val images [41K/6GB]** (extract the val2014 folder and place at location cocoapi/images/val2014/)
   * **2014 Test images [41K/6GB]** (extract the test2014 folder and place at location cocoapi/images/test2014/)
 
-4. The project is structured as a series of Jupyter notebooks that are designed to be completed in sequential order (`0_Dataset.ipynb, 1_Preliminaries.ipynb, 2_Training.ipynb, 3_Inference.ipynb`).
+
+## Network Architecture   
+ - Firstly images were passed through the pretrained resnet model to extract the image features
+ - Those extracted features were then given input to the lstm layer along with the embdded layer output
+ - I have used 1 LSTM layer
+ - Embedding layer size = LSTM layer size = 512
+ - Batch size = 128
+ - Learning rate = 0.001
+ - Vocabulary threshold = 5
+ - For network architecture, I have used [this paper](https://arxiv.org/pdf/1411.4555.pdf) as a reference
+ 
+## Inference
+![][/home/apu/Pictures/Screenshot from 2020-07-06 12-30-19.png]
+

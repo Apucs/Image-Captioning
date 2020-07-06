@@ -40,6 +40,11 @@ cd ..
  - Vocabulary threshold = 5
  - For network architecture, I have used [this paper](https://arxiv.org/pdf/1411.4555.pdf) as a reference
  
-## Inference
-![][/home/apu/Pictures/Screenshot from 2020-07-06 12-30-19.png]
+## Inference 
+![skating](images/skate.png)
+
+![](images/plane.png)
+
+![](images/herd.png)
+
 
